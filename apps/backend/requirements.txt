@@ -1,0 +1,47 @@
+fastapi==0.111.1
+uvicorn[standard]==0.30.3
+
+
+motor==3.5.0           # Async MongoDB driver (wraps pymongo with asyncio)
+pymongo==4.8.0         # Sync driver (used by motor internally + for scripts)
+
+
+pydantic[email]>=2.10.0
+pydantic-settings>=2.5.0
+
+
+python-jose[cryptography]==3.3.0
+bcrypt>=4.0.0             # Direct bcrypt; passlib[bcrypt] has bcrypt 4 compat issues
+
+# ─── HTTP client (for adapters + tests) ───────────────────────────
+httpx>=0.28.1             # >=0.28.1 required by google-genai
+
+# ─── TLS certificates ─────────────────────────────────────────────
+certifi>=2024.0.0         # CA bundle for MongoDB Atlas TLS on macOS
+
+
+python-multipart==0.0.9
+
+
+python-dotenv==1.0.1
+
+
+google-generativeai>=0.8.0
+protobuf>=5.29.0,<6.0.0
+
+
+pytest==8.3.2
+pytest-asyncio==0.23.8
+anyio[trio]==4.4.0     # Async test backend
+
+
+slowapi==0.1.9            # Starlette/FastAPI rate limiting (wraps limits library)
+
+
+Pillow>=10.0.0          # Base64 → PIL Image decoding for CV model
+transformers>=4.35.0    # HuggingFace model loading
+torch>=2.0.0            # PyTorch CPU inference
+torchvision>=0.15.0     # Image transforms used by ViT pipeline
+
+ruff==0.5.5
+beautifulsoup4
